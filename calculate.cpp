@@ -11,14 +11,12 @@ std::string calculate(const std::string& command, int first, int second) {
         return std::to_string(first * second);
     } else if(command == "divide") {
         if(second == 0) {
-            std::cout << "Invalid data" << std::endl;
-            std::cout << "Cannot divide by zero" << std::endl;
+            return "Cannot divide by zero";
         } else {
             return std::to_string(first / second);
         }
     } else {
-        std::cout << "Invalid data" << std::endl;
-        
+        return "Invalid data";
     }
 }
 
